@@ -21,10 +21,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Primeiro App com AppBar'),
+      backgroundColor: Colors.black,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Pode entrar',
+            style: TextStyle(
+                fontSize: 30,
+                color: Colors.white,
+                fontWeight: FontWeight.w700),
+          ),
+          Text(
+            '0',
+            style: TextStyle(
+                fontSize: 100,
+                color: Colors.white,
+                fontWeight: FontWeight.w700),
+          ),
+        ],
       ),
-      drawer: Drawer(),
     );
   }
 }
