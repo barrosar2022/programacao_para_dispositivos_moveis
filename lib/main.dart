@@ -9,14 +9,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+
+  int cont = 0;
+
+  void decrementar(){
+    cont--;
+  }
+
+  void incrementar(){
+    cont++;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +48,28 @@ class HomePage extends StatelessWidget {
                 fontSize: 100,
                 color: Colors.white,
                 fontWeight: FontWeight.w700),
+          ),
+          Row(
+            children:[
+              TextButton(
+                onPressed: decrementar,
+                child: Text(
+                  'Sair',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16),
+                ),
+              ),
+              TextButton(
+                onPressed: incrementar,
+                child: Text(
+                  'Entrar',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16),
+                ),
+              ),
+            ],
           ),
         ],
       ),
