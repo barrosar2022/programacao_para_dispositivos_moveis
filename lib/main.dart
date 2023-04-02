@@ -42,6 +42,7 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.w700),
           ),
+          SizedBox(height: 32),
           Text(
             '0',
             style: TextStyle(
@@ -49,23 +50,42 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.w700),
           ),
+          SizedBox(height: 32),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children:[
               TextButton(
                 onPressed: decrementar,
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  fixedSize: Size(100, 100),
+                  primary: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    )
+                ),
                 child: Text(
                   'Sair',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 16),
                 ),
               ),
+              SizedBox(width: 32,),
               TextButton(
                 onPressed: incrementar,
+                style: TextButton.styleFrom(
+                 backgroundColor: Colors.white,
+                 fixedSize: Size(100, 100),
+                 primary: Colors.black,
+                 shape: RoundedRectangleBorder(
+                   borderRadius: BorderRadius.circular(24),
+                 )
+                ),
                 child: Text(
                   'Entrar',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 16),
                 ),
               ),
