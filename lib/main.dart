@@ -5,7 +5,6 @@ void main(){
     child: Container(
       color: Colors.yellow,
       alignment: Alignment.center,
-      child: const Text('Olá Mundo!'),
       ),
     ),
   );
