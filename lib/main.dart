@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
@@ -20,11 +20,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      alignment: Alignment.center,
-      child: const Text('Hello World!'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Primeiro App com AppBar'),
+      ),
+      drawer: Drawer(),
     );
   }
 }
-
