@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MaterialApp(
-    home: Container(
-      color: Colors.yellow,
-      alignment: Alignment.center,
-      child: Text('Hello World!'),
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Container(
+        color: Colors.black,
+        alignment: Alignment.center,
+        child: Text('Hello World!'),
       ),
-    ),
-  );
+    );
+  }
 }
