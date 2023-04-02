@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -76,7 +77,7 @@ class HomePage extends StatelessWidget {
                   'Sair',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16),
+                      fontSize: 24),
                 ),
               ),
               SizedBox(width: 32,),
@@ -94,7 +95,7 @@ class HomePage extends StatelessWidget {
                   'Entrar',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16),
+                      fontSize: 24),
                 ),
               ),
             ],
