@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(Material(
-    child: Container(
+  runApp(MaterialApp(
+    home: Container(
       color: Colors.yellow,
       alignment: Alignment.center,
+      child: Text('Hello World!'),
       ),
     ),
   );
