@@ -39,8 +39,21 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  bool get isEmpty => cont == 0;
+  bool get isFull => cont == 20;
+
+  /*
+  bool isEmpty(){
+    return cont==0;
+  }
+
+  bool isFull(){
+    return cont ==20;
+  }
+*/
   @override
   Widget build(BuildContext context) {
+    print('Build');
     return Scaffold(
       backgroundColor: Colors.black,
       body: Container(
@@ -54,10 +67,10 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Pode entrar',
+              isFull? 'Lotado': 'Pode entrar!',
               style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.white,
+                  fontSize: 50,
+                  color: isFull? Colors.red: Colors.white,
                   fontWeight: FontWeight.w700),
             ),
             Padding(
@@ -66,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                 cont.toString(),
                 style: TextStyle(
                   fontSize: 100,
-                  color: Colors.white,
+                  color: isFull? Colors.red: Colors.white,
                 ),
               ),
             ),
@@ -74,9 +87,9 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                  onPressed: decrementar,
+                  onPressed: isEmpty? null: decrementar,
                   style: TextButton.styleFrom(
-                      backgroundColor: Colors.white,
+                      backgroundColor: isEmpty? Colors.white.withOpacity(0.2):Colors.white,
                       fixedSize: Size(100, 100),
                       primary: Colors.black,
                       shape: RoundedRectangleBorder(
@@ -92,9 +105,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(width: 32,),
                 TextButton(
-                  onPressed: incrementar,
+                  onPressed: isFull ? null: incrementar,
                   style: TextButton.styleFrom(
-                      backgroundColor: Colors.white,
+                      backgroundColor: isFull ? Colors.white.withOpacity(0.2):Colors.white,
                       fixedSize: Size(100, 100),
                       primary: Colors.black,
                       shape: RoundedRectangleBorder(
